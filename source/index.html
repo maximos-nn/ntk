@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
   <title>НТК Трейд</title>
 </head>
-<body>
+<body class="page__body">
 
-  <header>
-    <a aria-label="Главная страница">
-      <img src="" alt="Логотип компании">
+  <header class="header">
+    <a class="header__logo logo" aria-label="Главная страница">
+      <img class="logo__image" src="" width="100" height="40" alt="Логотип компании">
     </a>
-    <nav>
-      <button aria-label="Меню">Меню</button>
-      <ul>
-        <li><a href="#vacancies">Направления</a></li>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Преимущества</a></li>
-        <li><a href="#">Соискатели</a></li>
+    <nav class="header__menu menu">
+      <button class="menu__button" type="button" aria-label="Меню" aria-expanded="false" aria-controls="menu__list">
+        <svg class="menu__icon" width="40" height="40" aria-hidden="true">
+          <use class="menu__icon-burger" href="images/menu.svg#burger"></use>
+          <use class="menu__icon-cross" href="images/menu.svg#cross"></use>
+        </svg>
+      </button>
+      <ul class="menu__list" id="menu__list">
+        <li class="menu__item"><a class="menu__link" href="#vacancies">Направления</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Преимущества</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Соискатели</a></li>
       </ul>
     </nav>
   </header>
@@ -188,21 +193,29 @@
             <option value="52" selected>Нижний Новгород</option>
           </select>
         </p>
-        <label for="name">Как вас зовут?</label>
-        <input type="text" id="name">
-        <label for="email">Ваш E–mail</label>
-        <input type="email" id="email">
-        <label for="vacancy">Выберите вакансию</label>
-        <select name="vacancy" id="vacancy">
-          <option selected disabled hidden></option>
-          <option value="code">Программист</option>
-          <option value="html">Верстальщик</option>
-          <option value="analyst">Аналитик</option>
-          <option value="seo">SEO специалист</option>
-          <option value="content">Контент менеджер</option>
-        </select>
-        <label for="info">Напишите о себе кратко</label>
-        <textarea name="info" id="info"></textarea>
+        <p>
+          <label for="name">Как вас зовут?</label>
+          <input type="text" id="name">
+        </p>
+        <p>
+          <label for="email">Ваш E–mail</label>
+          <input type="email" id="email">
+        </p>
+        <p>
+          <label for="vacancy">Выберите вакансию</label>
+          <select name="vacancy" id="vacancy">
+            <option selected disabled hidden></option>
+            <option value="code">Программист</option>
+            <option value="html">Верстальщик</option>
+            <option value="analyst">Аналитик</option>
+            <option value="seo">SEO специалист</option>
+            <option value="content">Контент менеджер</option>
+          </select>
+        </p>
+        <p>
+          <label for="info">Напишите о себе кратко</label>
+          <textarea name="info" id="info"></textarea>
+        </p>
         <button type="button">Прикрепить документы</button>
         <input type="checkbox" name="accept" id="accept" checked>
         <label for="accept">Я соглашаюсь с <a href="#">политикой конфиденциальности</a>, нажимая на кнопку “Откликнуться”</label>

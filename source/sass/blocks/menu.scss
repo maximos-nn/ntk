@@ -1,0 +1,44 @@
+.menu {
+  background-color: #d32329;
+  box-shadow: 0 34px 68px 0 rgba(211, 35, 42, 0.3);
+}
+
+.menu__button {
+  display: none;
+}
+
+@media (max-width: $desktop-width - 1) {
+  .menu__button {
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.menu__list {
+  @include list-reset;
+}
+
+@media (max-width: $desktop-width - 1) {
+  .menu__icon-burger {
+    display: block;
+    stroke: white;
+    stroke-width: 2;
+
+    .menu__button--opened & {
+      display: none;
+    }
+  }
+
+  .menu__icon-cross {
+    display: none;
+
+    .menu__button--opened & {
+      display: block;
+      stroke: white;
+    }
+  }
+}

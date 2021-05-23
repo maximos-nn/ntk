@@ -1,3 +1,25 @@
 @import "../../node_modules/normalize-scss/sass/normalize/import-now";
+@import "./font-face.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
 @import "./scaffolding.scss";
 @import "./grid.scss";
+@import "./blocks/page.scss";
+@import "./blocks/header.scss";
+@import "./blocks/menu.scss";
+
+#vacancy {
+  background-color: white;
+  // font-weight: bold;
+  font-size: 20px;
+  padding: 24px 0;
+  border: none;
+  border-bottom: 2px solid #d3232a;
+  width: 614px;
+  option:not([hidden]) {
+    font-size: inherit;
+  }
+  @media (max-width: 1440px) {
+    width: 100%;
+  }
+}
