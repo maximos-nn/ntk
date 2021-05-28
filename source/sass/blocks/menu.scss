@@ -1,5 +1,5 @@
 .menu {
-  background-color: #d32329;
+  background-color: #81d323;
   box-shadow: 0 34px 68px 0 rgba(211, 35, 42, 0.3);
 }
 
@@ -20,6 +20,17 @@
 
 .menu__list {
   @include list-reset;
+  background-color: #d3232946;
+}
+
+@media (min-width: $desktop-width) {
+  .menu__list {
+    display: flex;
+  }
+}
+
+.menu__icon {
+  vertical-align: middle;
 }
 
 @media (max-width: $desktop-width - 1) {
