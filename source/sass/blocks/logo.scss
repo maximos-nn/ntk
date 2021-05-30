@@ -2,10 +2,32 @@
   vertical-align: middle;
 }
 
+@media (max-width: $desktop-width - 1) {
+  .logo {
+    width: 145px;
+    height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    width: 242px;
+    height: 40px;
+  }
+}
+
 .logo__ntk {
   fill: #d3232a;
+
+  .logo--white & {
+    fill: white;
+  }
 }
 
 .logo__traid {
   fill: black;
+
+  .logo--white & {
+    fill: white;
+  }
 }

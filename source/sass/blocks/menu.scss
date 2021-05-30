@@ -1,13 +1,32 @@
-.menu {
-  background-color: #81d323;
-  box-shadow: 0 34px 68px 0 rgba(211, 35, 42, 0.3);
+$menu-row-layout-width: $desktop-width;
+
+//
+// menu
+//
+
+@media (max-width: $menu-row-layout-width - 1) {
+  .menu {
+    padding: 16px 24px 24px;
+  }
+
+  .menu--opened {
+    padding-bottom: 56px;
+    background-color: #d3232a;
+    box-shadow: 0 34px 68px 0 rgba(211, 35, 42, 0.3);
+  }
 }
 
-.menu__button {
-  display: none;
+//
+// menu__button
+//
+
+@media (min-width: $menu-row-layout-width) {
+  .menu__button {
+    display: none;
+  }
 }
 
-@media (max-width: $desktop-width - 1) {
+@media (max-width: $menu-row-layout-width - 1) {
   .menu__button {
     display: block;
     margin: 0;
@@ -18,28 +37,21 @@
   }
 }
 
-.menu__list {
-  @include list-reset;
-  background-color: #d3232946;
-}
-
-@media (min-width: $desktop-width) {
-  .menu__list {
-    display: flex;
-  }
-}
+//
+// menu__icon
+//
 
 .menu__icon {
   vertical-align: middle;
 }
 
-@media (max-width: $desktop-width - 1) {
+@media (max-width: $menu-row-layout-width - 1) {
   .menu__icon-burger {
     display: block;
-    stroke: white;
-    stroke-width: 2;
+    stroke: black;
+    stroke-width: 1;
 
-    .menu__button--opened & {
+    .menu--opened & {
       display: none;
     }
   }
@@ -47,9 +59,65 @@
   .menu__icon-cross {
     display: none;
 
-    .menu__button--opened & {
+    .menu--opened & {
       display: block;
       stroke: white;
+    }
+  }
+}
+
+//
+// menu__list
+//
+
+.menu__list {
+  @include list-reset;
+}
+
+@media (min-width: $menu-row-layout-width) {
+  .menu__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: $menu-row-layout-width - 1) {
+  .menu__list {
+    display: none;
+    margin-top: 48px;
+
+    .menu--opened & {
+      display: block;
+    }
+  }
+}
+
+//
+// menu__item
+//
+
+@media (min-width: $menu-row-layout-width) {
+  .menu__item {
+    line-height: 1.2;
+
+    & + & {
+      margin-left: 32px;
+    }
+
+    &:hover {
+      color: #d3232a;
+    }
+  }
+}
+
+@media (max-width: $menu-row-layout-width - 1) {
+  .menu__item {
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+
+    & + & {
+      margin-top: 32px;
     }
   }
 }

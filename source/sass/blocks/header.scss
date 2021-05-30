@@ -1,23 +1,53 @@
-@media (min-width: $desktop-width) {
+$header-row-layout-width: $desktop-width;
+
+//
+// header
+//
+
+@media (min-width: $header-row-layout-width) {
   .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
   }
 }
+
+@media (max-width: $header-row-layout-width - 1) {
+  .header {
+    min-height: 80px;
+  }
+}
+
+//
+// header__logo
+//
 
 .header__logo {
   display: inline-block;
   line-height: 1;
 }
 
-@media (max-width: $desktop-width - 1) {
+@media (max-width: $header-row-layout-width - 1) {
   .header__logo {
     position: relative;
+    top: 24px;
+    left: 24px;
     z-index: 1;
   }
 }
 
-@media (max-width: $desktop-width - 1) {
+//
+// header__menu
+//
+
+@media (min-width: $header-row-layout-width) {
+  .header__menu {
+    margin-left: 32px;
+  }
+}
+
+@media (max-width: $header-row-layout-width - 1) {
   .header__menu {
     position: absolute;
     left: 0;
