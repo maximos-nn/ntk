@@ -4,6 +4,13 @@ $header-row-layout-width: $desktop-width;
 // header
 //
 
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 @media (min-width: $header-row-layout-width) {
   .header {
     display: flex;

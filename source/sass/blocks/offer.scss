@@ -1,8 +1,51 @@
 .offer {
-  min-height: 643px;
+  padding-top: 80px;
   background-color: #f4f5f7;
-  background-image: url("../images/mask-group.svg");
-  background-repeat: no-repeat;
-  background-size: 1041px;
-  background-position: center bottom -380px;
 }
+
+@media (min-width: $desktop-width) {
+  .offer {
+    min-height: 643px;
+    background-image: url("../images/pair.png"), url("../images/mask-group.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, 1041px;
+    background-position: left calc(50% + 208px) bottom, left calc(50% + 250px) bottom -380px;
+  }
+}
+
+@media (max-width: $desktop-width - 1) {
+  .offer {
+    min-height: 651px;
+    background-image: url("../images/pair-mobile.png");
+    // background-size: 232px auto, 375px;
+    background-position: center bottom 136px;
+    background-repeat: no-repeat;
+  }
+}
+
+.offer__title {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (min-width: $desktop-width) {
+  .offer__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: $desktop-width - 1) {
+  .offer__title {
+    font-size: 32px;
+    margin-top: 0;
+  }
+}
+// @media (max-width: $desktop-width - 1) {
+//   .offer__button::before {
+//     content: "";
+//     display: block;
+//     width: 375px;
+//     height: 232px;
+//     background-image: url("../images/pair-mobile.png");
+//   }
+// }
